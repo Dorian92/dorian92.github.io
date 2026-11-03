@@ -1,0 +1,182 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Dorian Sabo — Senior Mobile Engineer</title>
+<meta name="description" content="Dorian Sabo is a senior mobile engineer in Novi Sad, Serbia. Flutter, iOS, and Android apps for fintech and Web3 — wallets, trading, and real-time market data. Remote.">
+<meta name="author" content="Dorian Sabo">
+<meta name="theme-color" content="#0A0A0A">
+<meta name="color-scheme" content="dark">
+<meta name="referrer" content="strict-origin-when-cross-origin">
+<link rel="canonical" href="https://dorian92.github.io/">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://dorian92.github.io/">
+<meta property="og:title" content="Dorian Sabo — Senior Mobile Engineer">
+<meta property="og:description" content="Flutter, iOS, and Android apps for fintech and Web3. Novi Sad, Serbia · remote.">
+<meta property="og:image" content="https://dorian92.github.io/assets/og.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="Dorian Sabo, Senior Mobile Engineer. Flutter, iOS, Android. Novi Sad, Serbia.">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Dorian Sabo — Senior Mobile Engineer">
+<meta name="twitter:description" content="Flutter, iOS, and Android apps for fintech and Web3. Novi Sad, Serbia · remote.">
+<meta name="twitter:image" content="https://dorian92.github.io/assets/og.png">
+<link rel="icon" href="favicon.svg" type="image/svg+xml">
+<link rel="icon" href="assets/icons/favicon-32.png" type="image/png" sizes="32x32">
+<link rel="apple-touch-icon" href="assets/icons/apple-touch-icon.png">
+<link rel="manifest" href="site.webmanifest">
+<link rel="preload" href="assets/fonts/geist-latin.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="assets/fonts/geist-mono-latin.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="css/site.css">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Person",
+  "name": "Dorian Sabo",
+  "jobTitle": "Senior Mobile Engineer",
+  "url": "https://dorian92.github.io/",
+  "image": "https://dorian92.github.io/assets/og.png",
+  "homeLocation": {
+    "@type": "Place",
+    "name": "Novi Sad, Serbia"
+  },
+  "sameAs": ["https://github.com/Dorian92"],
+  "knowsAbout": ["Flutter", "Dart", "iOS", "Android", "Fintech", "Web3"]
+}
+</script>
+<script>
+  document.documentElement.classList.add("js");
+  if (matchMedia("(prefers-reduced-motion: reduce)").matches) {
+    document.documentElement.classList.add("reduce");
+  }
+</script>
+</head>
+<body>
+<canvas id="field" aria-hidden="true"></canvas>
+<div class="veil" aria-hidden="true"></div>
+
+<article id="static">
+  <p class="role">Senior Mobile Engineer · Novi Sad, Serbia · remote</p>
+  <h1>Dorian Sabo</h1>
+  <p>Flutter, iOS and Android apps for fintech and Web3 — wallets, trading and real-time market data, built to feel native on every platform. Eight or more years. The interactive terminal on this page needs JavaScript; the same facts are written out here.</p>
+  <h2>Experience</h2>
+  <article>
+    <h3>Trojan Trading <span class="role">2025 · past</span></h3>
+    <p>Mobile development on a Solana trading app with real-time market data.</p>
+  </article>
+  <article>
+    <h3>Solflare Wallet <span class="role">2022 — 2025</span></h3>
+    <p>Features for the Solflare Solana wallet app on iOS and Android.</p>
+  </article>
+  <article>
+    <h3>BrightMarbles <span class="role">2018 — 2022</span></h3>
+    <p>Cross-platform mobile apps for client projects.</p>
+  </article>
+  <h2>Projects</h2>
+  <article>
+    <h3>Pulse</h3>
+    <p>A Flutter crypto market tracker. CoinGecko metadata and Binance public prices over one shared WebSocket. It shows market data only — it doesn't trade and it doesn't hold accounts.</p>
+    <p><a href="https://github.com/Dorian92/pulse-flutter">github.com/Dorian92/pulse-flutter</a></p>
+  </article>
+  <article>
+    <h3>Pulse RN</h3>
+    <p>A React Native take on the same tracker. Stack, repo, and demo are not filled in yet.</p>
+  </article>
+  <h2>Plugins and native integration</h2>
+  <p>Flutter plugins with native Swift and Kotlin code via platform channels. The Dart API and the native handlers ship together — plugin work, not a native-only role.</p>
+  <h2>Contact</h2>
+  <p>Novi Sad, Serbia · remote · CET.</p>
+  <p><a href="https://github.com/Dorian92" rel="me">github.com/Dorian92</a></p>
+  <p class="note">Email, CV, photo, LinkedIn, X, live demos, and open-source entries are edited in content/site.js. They stay marked until filled in.</p>
+</article>
+
+<div class="app">
+  <h1 class="sr">Dorian Sabo, Senior Mobile Engineer</h1>
+  <div id="shell">
+    <a class="skip" id="skip" href="#cmd">Skip to terminal</a>
+    <div class="ticker">
+      <button class="live" id="tickerToggle" type="button" aria-pressed="false" aria-label="Pause animations"><i aria-hidden="true"></i>LIVE</button>
+      <div class="track" id="track" aria-hidden="true"></div>
+    </div>
+    <header class="nav">
+      <button class="brand" id="brand" type="button" data-cmd="whoami" aria-label="About Dorian Sabo">
+        <i class="dot" aria-hidden="true"></i>dorian<span>@sabo:~</span>
+      </button>
+      <nav class="links" id="navLinks" aria-label="Sections"></nav>
+      <div class="right">
+        <button class="kbd" id="palBtn" type="button" aria-haspopup="dialog" aria-label="Open command palette"><kbd aria-hidden="true">⌘K</kbd><span>commands</span></button>
+        <span id="cvSlot"></span>
+      </div>
+    </header>
+    <main class="stage">
+      <section class="term" id="term" aria-label="Terminal">
+        <button class="drawer-h" id="drawerH" type="button" aria-expanded="false" aria-controls="out">
+          <span class="grip" aria-hidden="true"></span>
+          <span class="p" aria-hidden="true">❯</span>
+          <span class="last" id="lastLine">terminal · tap to open</span>
+          <span class="chev" aria-hidden="true">▲</span>
+        </button>
+        <div class="chrome">
+          <div class="lights" aria-hidden="true"><i></i><i></i><i></i></div>
+          <div class="tabs"><span class="tab on">zsh — dorian-phone</span><span class="tab">flutter run</span></div>
+          <span class="sp"></span>
+          <span>⌘K palette · ↑↓ history</span>
+        </div>
+        <div class="out" id="out" role="region" aria-label="Terminal output" tabindex="0"></div>
+        <div class="inrow">
+          <span class="p" aria-hidden="true">❯</span>
+          <span class="pu" aria-hidden="true">~</span>
+          <input id="cmd" autocomplete="off" autocapitalize="off" autocorrect="off" spellcheck="false" enterkeyhint="go" placeholder="type a command — try 'help'" aria-label="Terminal command">
+        </div>
+        <div class="chips" id="chips" aria-label="Suggested commands"></div>
+      </section>
+
+      <div class="cable" aria-hidden="true">
+        <svg id="cableSvg" viewBox="0 0 110 600" preserveAspectRatio="none">
+          <path class="wire" id="wire" d=""></path>
+          <path class="glow" id="glowp" d=""></path>
+        </svg>
+        <div class="packet" id="packet"></div>
+        <div class="plug" id="plug"></div>
+      </div>
+
+      <div class="devwrap">
+        <div class="status" id="status"><i aria-hidden="true"></i><span id="statusText">adb connected · device: dorian-phone · idle</span></div>
+        <div class="phone" id="phone">
+          <div class="screen" id="screen">
+            <div class="island" id="island" aria-hidden="true"><i></i></div>
+            <div class="sbar" id="sbar" aria-hidden="true">
+              <span id="ptime">--:--</span>
+              <span class="ic">
+                <svg width="17" height="11" viewBox="0 0 17 11" fill="#fff" aria-hidden="true"><rect x="0" y="7" width="3" height="4" rx="1"/><rect x="4.5" y="5" width="3" height="6" rx="1"/><rect x="9" y="2.5" width="3" height="8.5" rx="1"/><rect x="13.5" y="0" width="3" height="11" rx="1"/></svg>
+                <svg width="15" height="11" viewBox="0 0 15 11" fill="#fff" aria-hidden="true"><path d="M7.5 2.2c2.2 0 4.2.9 5.7 2.3l1.1-1.1A9.6 9.6 0 0 0 7.5.6 9.6 9.6 0 0 0 .7 3.4l1.1 1.1a8 8 0 0 1 5.7-2.3Zm0 3.2c1.3 0 2.5.5 3.4 1.4l1.1-1.1a6.4 6.4 0 0 0-9 0l1.1 1.1c.9-.9 2.1-1.4 3.4-1.4Zm0 3.2c-.5 0-1 .2-1.3.5L7.5 10.4l1.3-1.3c-.3-.3-.8-.5-1.3-.5Z"/></svg>
+                <span class="batt"><b></b></span>
+              </span>
+            </div>
+            <div id="scrRoot"></div>
+            <div class="flash" id="flash" aria-hidden="true"></div>
+            <div class="toast" id="toast" aria-hidden="true"></div>
+            <button class="homebar" id="homebar" type="button" aria-label="Phone home screen"></button>
+          </div>
+        </div>
+      </div>
+    </main>
+  </div>
+
+  <div class="pal-bg" id="palBg" role="dialog" aria-modal="true" aria-labelledby="palTitle">
+    <div class="pal">
+      <h2 id="palTitle" class="sr">Command palette</h2>
+      <input id="palIn" role="combobox" aria-expanded="true" aria-controls="palList" aria-autocomplete="list" aria-label="Run a command" placeholder="Run a command…" autocomplete="off" spellcheck="false">
+      <ul id="palList" role="listbox"></ul>
+      <div class="ft"><span>↑↓ navigate</span><span>enter run</span><span>esc close</span></div>
+    </div>
+  </div>
+  <div id="announcer" class="sr" aria-live="polite" aria-atomic="true"></div>
+  <footer class="sr"><p>© <span id="year">2026</span> Dorian Sabo. Novi Sad, Serbia. Remote.</p></footer>
+</div>
+<script src="content/site.js"></script>
+<script src="js/main.js"></script>
+<script src="js/particles.js"></script>
+</body>
+</html>
