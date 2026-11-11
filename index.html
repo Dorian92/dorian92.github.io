@@ -1,182 +1,357 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
 <meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Dorian Sabo — Senior Mobile Engineer</title>
-<meta name="description" content="Dorian Sabo is a senior mobile engineer in Novi Sad, Serbia. Flutter, iOS, and Android apps for fintech and Web3 — wallets, trading, and real-time market data. Remote.">
-<meta name="author" content="Dorian Sabo">
-<meta name="theme-color" content="#0A0A0A">
-<meta name="color-scheme" content="dark">
-<meta name="referrer" content="strict-origin-when-cross-origin">
-<link rel="canonical" href="https://dorian92.github.io/">
-<meta property="og:type" content="website">
-<meta property="og:url" content="https://dorian92.github.io/">
-<meta property="og:title" content="Dorian Sabo — Senior Mobile Engineer">
-<meta property="og:description" content="Flutter, iOS, and Android apps for fintech and Web3. Novi Sad, Serbia · remote.">
-<meta property="og:image" content="https://dorian92.github.io/assets/og.png">
-<meta property="og:image:width" content="1200">
-<meta property="og:image:height" content="630">
-<meta property="og:image:alt" content="Dorian Sabo, Senior Mobile Engineer. Flutter, iOS, Android. Novi Sad, Serbia.">
-<meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:title" content="Dorian Sabo — Senior Mobile Engineer">
-<meta name="twitter:description" content="Flutter, iOS, and Android apps for fintech and Web3. Novi Sad, Serbia · remote.">
-<meta name="twitter:image" content="https://dorian92.github.io/assets/og.png">
-<link rel="icon" href="favicon.svg" type="image/svg+xml">
-<link rel="icon" href="assets/icons/favicon-32.png" type="image/png" sizes="32x32">
-<link rel="apple-touch-icon" href="assets/icons/apple-touch-icon.png">
-<link rel="manifest" href="site.webmanifest">
-<link rel="preload" href="assets/fonts/geist-latin.woff2" as="font" type="font/woff2" crossorigin>
-<link rel="preload" href="assets/fonts/geist-mono-latin.woff2" as="font" type="font/woff2" crossorigin>
-<link rel="stylesheet" href="css/site.css">
-<script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@type": "Person",
-  "name": "Dorian Sabo",
-  "jobTitle": "Senior Mobile Engineer",
-  "url": "https://dorian92.github.io/",
-  "image": "https://dorian92.github.io/assets/og.png",
-  "homeLocation": {
-    "@type": "Place",
-    "name": "Novi Sad, Serbia"
-  },
-  "sameAs": ["https://github.com/Dorian92"],
-  "knowsAbout": ["Flutter", "Dart", "iOS", "Android", "Fintech", "Web3"]
-}
-</script>
-<script>
-  document.documentElement.classList.add("js");
-  if (matchMedia("(prefers-reduced-motion: reduce)").matches) {
-    document.documentElement.classList.add("reduce");
-  }
-</script>
+<link rel="stylesheet" href="assets/shared.css">
+<link rel="stylesheet" href="assets/phones.css">
+<link rel="stylesheet" href="assets/page.css">
 </head>
-<body>
-<canvas id="field" aria-hidden="true"></canvas>
-<div class="veil" aria-hidden="true"></div>
+<body class="v2">
+<div class="grain" aria-hidden="true">
+  <svg xmlns="http://www.w3.org/2000/svg">
+    <filter id="g"><feTurbulence type="fractalNoise" baseFrequency="0.85" numOctaves="4" stitchTiles="stitch"/></filter>
+    <rect width="100%" height="100%" filter="url(#g)"/>
+  </svg>
+</div>
 
-<article id="static">
-  <p class="role">Senior Mobile Engineer · Novi Sad, Serbia · remote</p>
-  <h1>Dorian Sabo</h1>
-  <p>Flutter, iOS and Android apps for fintech and Web3 — wallets, trading and real-time market data, built to feel native on every platform. Eight or more years. The interactive terminal on this page needs JavaScript; the same facts are written out here.</p>
-  <h2>Experience</h2>
-  <article>
-    <h3>Trojan Trading <span class="role">2025 · past</span></h3>
-    <p>Mobile development on a Solana trading app with real-time market data.</p>
-  </article>
-  <article>
-    <h3>Solflare Wallet <span class="role">2022 — 2025</span></h3>
-    <p>Features for the Solflare Solana wallet app on iOS and Android.</p>
-  </article>
-  <article>
-    <h3>BrightMarbles <span class="role">2018 — 2022</span></h3>
-    <p>Cross-platform mobile apps for client projects.</p>
-  </article>
-  <h2>Projects</h2>
-  <article>
-    <h3>Pulse</h3>
-    <p>A Flutter crypto market tracker. CoinGecko metadata and Binance public prices over one shared WebSocket. It shows market data only — it doesn't trade and it doesn't hold accounts.</p>
-    <p><a href="https://github.com/Dorian92/pulse-flutter">github.com/Dorian92/pulse-flutter</a></p>
-  </article>
-  <article>
-    <h3>Pulse RN</h3>
-    <p>A React Native take on the same tracker. Stack, repo, and demo are not filled in yet.</p>
-  </article>
-  <h2>Plugins and native integration</h2>
-  <p>Flutter plugins with native Swift and Kotlin code via platform channels. The Dart API and the native handlers ship together — plugin work, not a native-only role.</p>
-  <h2>Contact</h2>
-  <p>Novi Sad, Serbia · remote · CET.</p>
-  <p><a href="https://github.com/Dorian92" rel="me">github.com/Dorian92</a></p>
-  <p class="note">Email, CV, photo, LinkedIn, X, live demos, and open-source entries are edited in content/site.js. They stay marked until filled in.</p>
-</article>
+<header class="nav">
+  <a class="brand" href="#top"><span class="mark">DS</span> Dorian Sabo</a>
+  <nav class="nav-links">
+    <a href="#work">Work</a>
+    <a href="#experience">Experience</a>
+    <a href="#contact">Contact</a>
+  </nav>
+  <a class="nav-cta" href="#contact"><i class="dot"></i> Open to remote work</a>
+</header>
 
-<div class="app">
-  <h1 class="sr">Dorian Sabo, Senior Mobile Engineer</h1>
-  <div id="shell">
-    <a class="skip" id="skip" href="#cmd">Skip to terminal</a>
-    <div class="ticker">
-      <button class="live" id="tickerToggle" type="button" aria-pressed="false" aria-label="Pause animations"><i aria-hidden="true"></i>LIVE</button>
-      <div class="track" id="track" aria-hidden="true"></div>
+<main>
+  <section class="hero" id="top">
+    <div class="spots" aria-hidden="true">
+      <div class="spot-a"></div>
+      <div class="spot-b"></div>
+      <div class="spotlight"></div>
     </div>
-    <header class="nav">
-      <button class="brand" id="brand" type="button" data-cmd="whoami" aria-label="About Dorian Sabo">
-        <i class="dot" aria-hidden="true"></i>dorian<span>@sabo:~</span>
-      </button>
-      <nav class="links" id="navLinks" aria-label="Sections"></nav>
-      <div class="right">
-        <button class="kbd" id="palBtn" type="button" aria-haspopup="dialog" aria-label="Open command palette"><kbd aria-hidden="true">⌘K</kbd><span>commands</span></button>
-        <span id="cvSlot"></span>
+    <div class="hero-combo">
+      <div class="eyebrow">Dorian Sabo</div>
+      <h1>Cross-platform apps,<br class="break-desktop"> crafted to feel native.</h1>
+      <p class="lead">Senior mobile engineer. 8+ years shipping Flutter and React Native apps for iOS and Android — from fast-moving startups to products handling real money in real time.</p>
+      <div class="meta"><span>Novi Sad, Serbia</span><span>Remote</span></div>
+      <div class="actions">
+        <a class="btn btn-primary" href="#work">View work</a>
+        <a class="btn btn-ghost" href="#contact">Let’s talk</a>
       </div>
-    </header>
-    <main class="stage">
-      <section class="term" id="term" aria-label="Terminal">
-        <button class="drawer-h" id="drawerH" type="button" aria-expanded="false" aria-controls="out">
-          <span class="grip" aria-hidden="true"></span>
-          <span class="p" aria-hidden="true">❯</span>
-          <span class="last" id="lastLine">terminal · tap to open</span>
-          <span class="chev" aria-hidden="true">▲</span>
-        </button>
-        <div class="chrome">
-          <div class="lights" aria-hidden="true"><i></i><i></i><i></i></div>
-          <div class="tabs"><span class="tab on">zsh — dorian-phone</span><span class="tab">flutter run</span></div>
-          <span class="sp"></span>
-          <span>⌘K palette · ↑↓ history</span>
-        </div>
-        <div class="out" id="out" role="region" aria-label="Terminal output" tabindex="0"></div>
-        <div class="inrow">
-          <span class="p" aria-hidden="true">❯</span>
-          <span class="pu" aria-hidden="true">~</span>
-          <input id="cmd" autocomplete="off" autocapitalize="off" autocorrect="off" spellcheck="false" enterkeyhint="go" placeholder="type a command — try 'help'" aria-label="Terminal command">
-        </div>
-        <div class="chips" id="chips" aria-label="Suggested commands"></div>
-      </section>
+    </div>
+  </section>
 
-      <div class="cable" aria-hidden="true">
-        <svg id="cableSvg" viewBox="0 0 110 600" preserveAspectRatio="none">
-          <path class="wire" id="wire" d=""></path>
-          <path class="glow" id="glowp" d=""></path>
-        </svg>
-        <div class="packet" id="packet"></div>
-        <div class="plug" id="plug"></div>
+  <section class="block-craft" id="craft">
+    <div class="proof" id="proof">
+      <div class="marks">
+        <b>Solflare</b><i>·</i>
+        <b>Trojan</b><i>·</i>
+        <b>BrightMarbles</b>
+      </div>
+      <div class="chips">
+        <span class="tag">8+ years</span>
+        <span class="tag">iOS &amp; Android</span>
+        <span class="tag">Flutter</span>
+        <span class="tag">React Native</span>
+      </div>
+    </div>
+
+    <div id="do">
+      <div class="kicker">What I do</div>
+      <h2 class="section-title do-head">The craft, from first sketch to the stores.</h2>
+      <div class="do-grid">
+        <article class="do-card">
+          <div class="do-num">01</div>
+          <h3>Product-grade apps</h3>
+          <p>I take products from the first idea to a release on the App Store and Google Play — architecture, interface, and the details that make an app feel finished.</p>
+        </article>
+        <article class="do-card">
+          <div class="do-num">02</div>
+          <h3>Performance &amp; real-time</h3>
+          <p>Smooth, responsive interfaces, live data where it matters, and apps that stay usable when the network does not.</p>
+        </article>
+        <article class="do-card">
+          <div class="do-num">03</div>
+          <h3>Security-minded</h3>
+          <p>Secure storage, authentication, and biometrics — designed in from the start, rather than added at the end.</p>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <section class="section work-section" id="work">
+    <div class="work-phones">
+      <div class="kicker">Selected work</div>
+      <h2 class="section-title">Apps in the hand</h2>
+      <p class="section-sub">A closer look at recent product work — a consumer wallet, a live trading app, and a personal Flutter project.</p>
+      <div class="phone-stage-wrap">
+        <div class="stage">
+          <div class="stage-glow"></div>
+          <div class="orbit"></div>
+          <div class="orbit orbit-2"></div>
+          <figure class="device " style="--tx:0px; --ty:20px; --tz:-30px; --rx:9deg; --ry:-22deg; --rz:-5deg; z-index:2; --sc:0.86">
+  <div class="device-glow-edge"></div>
+  <div class="device-body">
+    <span class="device-silent"></span>
+    <div class="device-inner">
+      <div class="island"></div>
+      <div class="sb">
+        <span>9:41</span>
+        <span class="sb-ico">
+          <svg width="16" height="10" viewBox="0 0 16 10" fill="#fff" aria-hidden="true"><rect x="0" y="6" width="2.2" height="4" rx="0.4"/><rect x="3.2" y="4" width="2.2" height="6" rx="0.4"/><rect x="6.4" y="2" width="2.2" height="8" rx="0.4"/><rect x="9.6" y="0" width="2.2" height="10" rx="0.4" opacity="0.35"/></svg>
+          <svg width="14" height="10" viewBox="0 0 14 10" fill="none" stroke="#fff" stroke-width="1.2" aria-hidden="true"><path d="M1.5 6.5c2.2-2.6 8.8-2.6 11 0"/><path d="M3.8 8.2c1.2-1.4 5.2-1.4 6.4 0"/><circle cx="7" cy="9.2" r="0.6" fill="#fff" stroke="none"/></svg>
+          <svg width="22" height="10" viewBox="0 0 22 10" aria-hidden="true"><rect x="0.5" y="1" width="18" height="8" rx="2" stroke="#fff" fill="none" opacity="0.9"/><rect x="2" y="2.4" width="13" height="5.2" rx="1" fill="#fff"/><rect x="19.2" y="3.2" width="1.4" height="3.6" rx="0.5" fill="#fff" opacity="0.6"/></svg>
+        </span>
       </div>
 
-      <div class="devwrap">
-        <div class="status" id="status"><i aria-hidden="true"></i><span id="statusText">adb connected · device: dorian-phone · idle</span></div>
-        <div class="phone" id="phone">
-          <div class="screen" id="screen">
-            <div class="island" id="island" aria-hidden="true"><i></i></div>
-            <div class="sbar" id="sbar" aria-hidden="true">
-              <span id="ptime">--:--</span>
-              <span class="ic">
-                <svg width="17" height="11" viewBox="0 0 17 11" fill="#fff" aria-hidden="true"><rect x="0" y="7" width="3" height="4" rx="1"/><rect x="4.5" y="5" width="3" height="6" rx="1"/><rect x="9" y="2.5" width="3" height="8.5" rx="1"/><rect x="13.5" y="0" width="3" height="11" rx="1"/></svg>
-                <svg width="15" height="11" viewBox="0 0 15 11" fill="#fff" aria-hidden="true"><path d="M7.5 2.2c2.2 0 4.2.9 5.7 2.3l1.1-1.1A9.6 9.6 0 0 0 7.5.6 9.6 9.6 0 0 0 .7 3.4l1.1 1.1a8 8 0 0 1 5.7-2.3Zm0 3.2c1.3 0 2.5.5 3.4 1.4l1.1-1.1a6.4 6.4 0 0 0-9 0l1.1 1.1c.9-.9 2.1-1.4 3.4-1.4Zm0 3.2c-.5 0-1 .2-1.3.5L7.5 10.4l1.3-1.3c-.3-.3-.8-.5-1.3-.5Z"/></svg>
-                <span class="batt"><b></b></span>
-              </span>
-            </div>
-            <div id="scrRoot"></div>
-            <div class="flash" id="flash" aria-hidden="true"></div>
-            <div class="toast" id="toast" aria-hidden="true"></div>
-            <button class="homebar" id="homebar" type="button" aria-label="Phone home screen"></button>
+    
+      <div class="app app-wallet">
+        <div class="wal-label">Portfolio</div>
+        <div class="wal-total">$24,610.48</div>
+        <div class="wal-sub">+3.12% today</div>
+        <div class="wal-acts">
+          <i class="send">Send</i>
+          <i class="recv">Receive</i>
+          <i class="swap">Swap</i>
+        </div>
+        <div class="asset"><div class="ic" style="background:#c9b27a">S</div><div class="nm"><b>Solana</b><span>82.40 SOL</span></div><div class="am">$11,842.00<span>+1.8%</span></div></div>
+        <div class="asset"><div class="ic" style="background:#7ea8c9">U</div><div class="nm"><b>USD Coin</b><span>4,200 USDC</span></div><div class="am">$4,200.00<span>0.0%</span></div></div>
+        <div class="asset"><div class="ic" style="background:#c9a07e">J</div><div class="nm"><b>Jupiter</b><span>1,840 JUP</span></div><div class="am">$1,168.40<span>+4.6%</span></div></div>
+        <div class="asset"><div class="ic" style="background:#9b8ed1">B</div><div class="nm"><b>Bonk</b><span>24.2M BONK</span></div><div class="am">$412.08<span>−0.9%</span></div></div>
+      </div>
+
+    </div>
+  </div>
+</figure>
+
+          
+<figure class="device " style="--tx:460px; --ty:24px; --tz:-40px; --rx:11deg; --ry:24deg; --rz:5deg; z-index:1; --sc:0.86">
+  <div class="device-glow-edge"></div>
+  <div class="device-body">
+    <span class="device-silent"></span>
+    <div class="device-inner">
+      <div class="island"></div>
+      <div class="sb">
+        <span>9:41</span>
+        <span class="sb-ico">
+          <svg width="16" height="10" viewBox="0 0 16 10" fill="#fff" aria-hidden="true"><rect x="0" y="6" width="2.2" height="4" rx="0.4"/><rect x="3.2" y="4" width="2.2" height="6" rx="0.4"/><rect x="6.4" y="2" width="2.2" height="8" rx="0.4"/><rect x="9.6" y="0" width="2.2" height="10" rx="0.4" opacity="0.35"/></svg>
+          <svg width="14" height="10" viewBox="0 0 14 10" fill="none" stroke="#fff" stroke-width="1.2" aria-hidden="true"><path d="M1.5 6.5c2.2-2.6 8.8-2.6 11 0"/><path d="M3.8 8.2c1.2-1.4 5.2-1.4 6.4 0"/><circle cx="7" cy="9.2" r="0.6" fill="#fff" stroke="none"/></svg>
+          <svg width="22" height="10" viewBox="0 0 22 10" aria-hidden="true"><rect x="0.5" y="1" width="18" height="8" rx="2" stroke="#fff" fill="none" opacity="0.9"/><rect x="2" y="2.4" width="13" height="5.2" rx="1" fill="#fff"/><rect x="19.2" y="3.2" width="1.4" height="3.6" rx="0.5" fill="#fff" opacity="0.6"/></svg>
+        </span>
+      </div>
+
+    
+      <div class="app app-pulse">
+        <div class="pulse-head"><div class="pulse-logo">PUL<em>SE</em></div><span style="font-size:10px;color:#b9a6a0">Today</span></div>
+        <div class="pulse-card">
+          <div class="t">Market pulse</div>
+          <div class="v">Calm · 62</div>
+          <svg class="wave" viewBox="0 0 200 54" preserveAspectRatio="none" fill="none">
+            <path d="M0 32 C12 32 14 18 22 18 C30 18 32 40 40 40 C48 40 50 12 60 12 C70 12 72 36 82 36 C92 36 94 20 104 20 C114 20 116 44 126 44 C136 44 138 16 148 16 C158 16 160 34 170 34 C180 34 182 24 190 24 C196 24 198 28 200 28" stroke="#e39a8a" stroke-width="1.7" stroke-linecap="round"/>
+            <path d="M0 32 C12 32 14 18 22 18 C30 18 32 40 40 40 C48 40 50 12 60 12 C70 12 72 36 82 36 C92 36 94 20 104 20 C114 20 116 44 126 44 C136 44 138 16 148 16 C158 16 160 34 170 34 C180 34 182 24 190 24 C196 24 198 28 200 28 V54 H0 Z" fill="url(#pw)" stroke="none" opacity="0.35"/>
+            <defs><linearGradient id="pw" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#e39a8a"/><stop offset="1" stop-color="#e39a8a" stop-opacity="0"/></linearGradient></defs>
+          </svg>
+        </div>
+        <div style="margin-top:12px;font-size:10px;color:#9a8b86;letter-spacing:.08em;text-transform:uppercase">Signals</div>
+        <div class="sig"><span class="dotp"></span><div><b>SOL volume rising</b><span>Watchlist · 12m ago</span></div></div>
+        <div class="sig"><span class="dotp" style="background:#8fbf9a"></span><div><b>Funding rate steady</b><span>Perps · 28m ago</span></div></div>
+        <div class="sig"><span class="dotp" style="background:#c9b27a"></span><div><b>New listing window</b><span>Research · 1h ago</span></div></div>
+      </div>
+
+    </div>
+  </div>
+</figure>
+
+          
+<figure class="device " style="--tx:230px; --ty:-16px; --tz:50px; --rx:6deg; --ry:2deg; --rz:0deg; z-index:3; --sc:0.86">
+  <div class="device-glow-edge"></div>
+  <div class="device-body">
+    <span class="device-silent"></span>
+    <div class="device-inner">
+      <div class="island"></div>
+      <div class="sb">
+        <span>9:41</span>
+        <span class="sb-ico">
+          <svg width="16" height="10" viewBox="0 0 16 10" fill="#fff" aria-hidden="true"><rect x="0" y="6" width="2.2" height="4" rx="0.4"/><rect x="3.2" y="4" width="2.2" height="6" rx="0.4"/><rect x="6.4" y="2" width="2.2" height="8" rx="0.4"/><rect x="9.6" y="0" width="2.2" height="10" rx="0.4" opacity="0.35"/></svg>
+          <svg width="14" height="10" viewBox="0 0 14 10" fill="none" stroke="#fff" stroke-width="1.2" aria-hidden="true"><path d="M1.5 6.5c2.2-2.6 8.8-2.6 11 0"/><path d="M3.8 8.2c1.2-1.4 5.2-1.4 6.4 0"/><circle cx="7" cy="9.2" r="0.6" fill="#fff" stroke="none"/></svg>
+          <svg width="22" height="10" viewBox="0 0 22 10" aria-hidden="true"><rect x="0.5" y="1" width="18" height="8" rx="2" stroke="#fff" fill="none" opacity="0.9"/><rect x="2" y="2.4" width="13" height="5.2" rx="1" fill="#fff"/><rect x="19.2" y="3.2" width="1.4" height="3.6" rx="0.5" fill="#fff" opacity="0.6"/></svg>
+        </span>
+      </div>
+
+    
+      <div class="app app-trade">
+        <div class="trade-top"><div class="trade-pair">SOL-PERP <span>Trojan</span></div><div class="trade-chip">Live</div></div>
+        <div class="trade-price">142.84</div>
+        <div class="trade-chg">+2.16  ·  +1.54%</div>
+        <div class="tfs"><b>5m</b><b class="on">15m</b><b>1H</b><b>4H</b></div>
+        <div class="candles">
+          <i class="up" style="--h:36;--w:18;--o:-6"></i>
+          <i class="dn" style="--h:48;--w:22;--o:-8"></i>
+          <i class="up" style="--h:42;--w:20;--o:-7"></i>
+          <i class="up" style="--h:58;--w:24;--o:-6"></i>
+          <i class="dn" style="--h:40;--w:28;--o:-10"></i>
+          <i class="dn" style="--h:30;--w:16;--o:-5"></i>
+          <i class="up" style="--h:52;--w:22;--o:-8"></i>
+          <i class="up" style="--h:66;--w:26;--o:-7"></i>
+          <i class="dn" style="--h:44;--w:20;--o:-6"></i>
+          <i class="up" style="--h:72;--w:28;--o:-8"></i>
+          <i class="up" style="--h:60;--w:22;--o:-5"></i>
+          <i class="dn" style="--h:50;--w:24;--o:-9"></i>
+          <i class="up" style="--h:80;--w:30;--o:-8"></i>
+          <i class="up" style="--h:92;--w:26;--o:-6"></i>
+          <i class="dn" style="--h:64;--w:22;--o:-7"></i>
+          <i class="up" style="--h:88;--w:32;--o:-10"></i>
+          <i class="up" style="--h:110;--w:28;--o:-6"></i>
+          <i class="dn" style="--h:70;--w:24;--o:-8"></i>
+          <i class="up" style="--h:96;--w:30;--o:-7"></i>
+          <i class="up" style="--h:120;--w:28;--o:-6"></i>
+        </div>
+        <div class="book-mini">
+          <div>
+            <div class="row g"><span>142.86</span><span>1.24</span></div>
+            <div class="row g"><span>142.84</span><span>0.80</span></div>
+            <div class="row g"><span>142.81</span><span>2.10</span></div>
+          </div>
+          <div>
+            <div class="row r"><span>142.90</span><span>0.62</span></div>
+            <div class="row r"><span>142.93</span><span>1.40</span></div>
+            <div class="row r"><span>142.97</span><span>0.95</span></div>
           </div>
         </div>
+        <div class="trade-cta"><b class="buy">Buy</b><b class="sell">Sell</b></div>
       </div>
-    </main>
-  </div>
 
-  <div class="pal-bg" id="palBg" role="dialog" aria-modal="true" aria-labelledby="palTitle">
-    <div class="pal">
-      <h2 id="palTitle" class="sr">Command palette</h2>
-      <input id="palIn" role="combobox" aria-expanded="true" aria-controls="palList" aria-autocomplete="list" aria-label="Run a command" placeholder="Run a command…" autocomplete="off" spellcheck="false">
-      <ul id="palList" role="listbox"></ul>
-      <div class="ft"><span>↑↓ navigate</span><span>enter run</span><span>esc close</span></div>
     </div>
   </div>
-  <div id="announcer" class="sr" aria-live="polite" aria-atomic="true"></div>
-  <footer class="sr"><p>© <span id="year">2026</span> Dorian Sabo. Novi Sad, Serbia. Remote.</p></footer>
-</div>
-<script src="content/site.js"></script>
-<script src="js/main.js"></script>
-<script src="js/particles.js"></script>
+</figure>
+          <div class="stage-floor"></div>
+        </div>
+      </div>
+      <div class="caps">
+        <div>
+          <b>Solflare Wallet</b>
+          <span>A consumer wallet for iOS and Android.</span>
+          <a class="cs" href="#experience">Case study →</a>
+        </div>
+        <div>
+          <b>Trojan Trading</b>
+          <span>Live trading, with real-time updates.</span>
+          <a class="cs" href="#experience">Case study →</a>
+        </div>
+        <div>
+          <b>Pulse</b>
+          <span>A personal Flutter project.</span>
+          <a class="cs" href="#experience">Case study →</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="block-approach" id="approach">
+    <div id="industries">
+      <div class="kicker">Industries</div>
+      <h2 class="section-title">I’ve built for fintech &amp; Web3, consumer apps, and startups.</h2>
+      <div class="ind-grid">
+        <article class="ind ind-lead">
+          <div class="kicker">Primary</div>
+          <h3>Fintech &amp; Web3</h3>
+          <p>Wallets, trading, payments, and other products that move money — where reliability, clarity, and performance are not optional.</p>
+        </article>
+        <article class="ind">
+          <div class="kicker">Also</div>
+          <h3>Consumer apps</h3>
+          <p>Thoughtful mobile experiences that people can pick up and use without a learning curve.</p>
+        </article>
+        <article class="ind">
+          <div class="kicker">Also</div>
+          <h3>Startups</h3>
+          <p>Shipping quickly with a solid foundation, so the product can grow without being rewritten.</p>
+        </article>
+      </div>
+    </div>
+
+    <div id="process">
+      <div class="kicker">How I work</div>
+      <h2 class="section-title">A clear path from idea to launch.</h2>
+      <div class="steps">
+        <article class="step">
+          <div class="step-n">01</div>
+          <h3>Discover</h3>
+          <p>I start by understanding the product, the people who will use it, and the constraints that will shape the work.</p>
+        </article>
+        <article class="step">
+          <div class="step-n">02</div>
+          <h3>Build</h3>
+          <p>Then I design a clear architecture and implement it across iOS and Android, with attention to performance and polish.</p>
+        </article>
+        <article class="step">
+          <div class="step-n">03</div>
+          <h3>Ship</h3>
+          <p>I see the release through — store requirements, quality checks, and a build that is ready for production.</p>
+        </article>
+        <article class="step">
+          <div class="step-n">04</div>
+          <h3>Support</h3>
+          <p>After launch I stay close to the product: performance, fixes, and the next iteration.</p>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <section class="section exp-section" id="experience">
+    <div class="kicker">Experience</div>
+    <h2 class="section-title">Roles I’ve held, and what I delivered.</h2>
+    <div class="timeline">
+      <article class="exp-row">
+        <div class="exp-when">Apr 2025 — Oct 2026</div>
+        <div class="exp-rail"><span class="exp-dot"></span></div>
+        <div class="exp-body">
+          <h3>Trojan Trading</h3>
+          <div class="exp-role">Senior Mobile Engineer</div>
+          <p>Built high-performance mobile features around real-time data and low-latency interfaces, including streaming pipelines over REST, WebSockets, and SSE.</p>
+        </div>
+      </article>
+      <article class="exp-row">
+        <div class="exp-when">May 2022 — Apr 2025</div>
+        <div class="exp-rail"><span class="exp-dot"></span></div>
+        <div class="exp-body">
+          <h3>Solflare Wallet</h3>
+          <div class="exp-role">Senior Mobile Engineer</div>
+          <p>Shipped portfolio, transaction, notification, and live-sync features for a consumer wallet used by over 4 million people, and reworked caching and rendering to cut screen load times by about 35% while raising crash-free sessions to 99.9%.</p>
+        </div>
+      </article>
+      <article class="exp-row">
+        <div class="exp-when">Jul 2018 — May 2022</div>
+        <div class="exp-rail"><span class="exp-dot"></span></div>
+        <div class="exp-body">
+          <h3>BrightMarbles</h3>
+          <div class="exp-role">Mobile Developer</div>
+          <p>Delivered end-to-end Flutter applications for international clients across multiple industries, from architecture through production release.</p>
+        </div>
+      </article>
+    </div>
+  </section>
+
+  <section class="contact-section" id="contact">
+    <div class="contact-inner">
+    <div class="kicker">Contact</div>
+    <h2>Have an app in mind? Let’s build it right.</h2>
+    <div class="contact-links">
+      <a class="link-chip" href="#">Email <em class="ex">placeholder</em></a>
+      <a class="link-chip" href="#">LinkedIn <em class="ex">placeholder</em></a>
+      <a class="link-chip" href="#">CV <em class="ex">placeholder</em></a>
+    </div>
+    <a class="nav-cta" href="#contact"><i class="dot"></i> Open to remote work</a>
+    </div>
+    <footer class="site foot-mini">
+      <span>Dorian Sabo — Senior Mobile Engineer</span>
+      <span>Novi Sad, Serbia · Remote</span>
+    </footer>
+  </section>
+</main>
 </body>
 </html>
