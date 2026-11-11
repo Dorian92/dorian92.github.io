@@ -318,6 +318,7 @@ body.v2 .nav { background: rgba(5,5,5,.55); }
   background: rgba(255,255,255,.03);
   font-size: 14px;
   font-weight: 500;
+  white-space: nowrap;
 }
 .contact-section .nav-cta { position: relative; }
 footer.site.foot-mini {
