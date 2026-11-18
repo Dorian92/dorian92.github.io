@@ -74,20 +74,31 @@
       if (bar) bar.style.setProperty('--p', max > 0 ? (window.scrollY / max).toFixed(4) : 0);
       if (reduced || !stackMq.matches) { inners.forEach(function (n) { n.style.removeProperty('--s'); n.style.removeProperty('--b'); }); return; }
       var vh = window.innerHeight;
-      cards.forEach(function (card, i) {
-        var depth = 0;
-        for (var j = i + 1; j < cards.length; j++) {
-          var top = parseFloat(getComputedStyle(cards[j]).top) || 0;
-          var r = cards[j].getBoundingClientRect();
-          depth += clamp(1 - (r.top - top) / (vh - top), 0, 1);
-        }
+      if (!stickyTops) stickyTops = cards.map(function (c) { return parseFloat(getComputedStyle(c).top) || 0; });
+      /* read every position first, then write: interleaving reads and writes forced a layout per card per frame */
+      var progress = cards.map(function (c, j) {
+        var top = stickyTops[j];
+        return clamp(1 - (c.getBoundingClientRect().top - top) / (vh - top), 0, 1);
+      });
+      var depth = 0;
+      for (var i = cards.length - 1; i >= 0; i--) {
         inners[i].style.setProperty('--s', (1 - Math.min(depth, 3) * 0.045).toFixed(4));
         inners[i].style.setProperty('--b', (1 - Math.min(depth, 3) * 0.18).toFixed(4));
-      });
+        depth += progress[i];
+      }
     });
   }
+  var stickyTops = null;
   window.addEventListener('scroll', onScroll, { passive: true });
-  window.addEventListener('resize', onScroll);
+  window.addEventListener('resize', function () { stickyTops = null; onScroll(); });
+
+  /* pause looping animations (float, ring, marquee, orbit) in sections that are off screen */
+  if ('IntersectionObserver' in window) {
+    var pio = new IntersectionObserver(function (entries) {
+      entries.forEach(function (en) { en.target.classList.toggle('offscreen', !en.isIntersecting); });
+    }, { rootMargin: '200px 0px' });
+    document.querySelectorAll('.work-card, .hero, .marquee').forEach(function (el) { pio.observe(el); });
+  }
   onScroll();
 
   if (reduced) return;

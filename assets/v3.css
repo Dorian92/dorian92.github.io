@@ -8,10 +8,10 @@ body.v3 .nav { position: sticky; z-index: 40; }
 
 /* ---------- Ambient background ---------- */
 .aurora { position: fixed; inset: 0; z-index: 0; pointer-events: none; overflow: hidden; }
-.au { position: absolute; border-radius: 50%; filter: blur(80px); opacity: .55; will-change: transform; }
-.au-1 { width: 60vw; height: 60vw; left: 40%; top: -25%; background: radial-gradient(circle, rgba(94,106,210,.32), transparent 65%); animation: drift1 38s ease-in-out infinite alternate; }
-.au-2 { width: 50vw; height: 50vw; left: -15%; top: 35%; background: radial-gradient(circle, rgba(70,150,170,.18), transparent 65%); animation: drift2 46s ease-in-out infinite alternate; }
-.au-3 { width: 44vw; height: 44vw; left: 55%; top: 60%; background: radial-gradient(circle, rgba(180,140,220,.14), transparent 65%); animation: drift3 52s ease-in-out infinite alternate; }
+.au { position: absolute; border-radius: 50%; opacity: .55; will-change: transform; } /* radial gradients are already soft; a live 80px blur was re-rasterised constantly */
+.au-1 { width: 60vw; height: 60vw; left: 40%; top: -25%; background: radial-gradient(circle, rgba(94,106,210,.32), transparent 72%); animation: drift1 38s ease-in-out infinite alternate; }
+.au-2 { width: 50vw; height: 50vw; left: -15%; top: 35%; background: radial-gradient(circle, rgba(70,150,170,.18), transparent 72%); animation: drift2 46s ease-in-out infinite alternate; }
+.au-3 { width: 44vw; height: 44vw; left: 55%; top: 60%; background: radial-gradient(circle, rgba(180,140,220,.14), transparent 72%); animation: drift3 52s ease-in-out infinite alternate; }
 @keyframes drift1 { to { transform: translate(-18vw, 22vh) scale(1.15); } }
 @keyframes drift2 { to { transform: translate(24vw, -16vh) scale(.9); } }
 @keyframes drift3 { to { transform: translate(-30vw, -28vh) scale(1.2); } }
@@ -51,7 +51,7 @@ h1 .w > span {
 
 .hero-stage { position: relative; height: 640px; perspective: 1600px; --mx: 0; --my: 0; }
 .hs-glow { position: absolute; left: 50%; top: 48%; width: 560px; height: 520px; transform: translate(-50%,-50%);
-  background: radial-gradient(ellipse, rgba(110,126,210,.28), rgba(110,126,210,.05) 45%, transparent 70%); filter: blur(10px); }
+  background: radial-gradient(ellipse, rgba(110,126,210,.28), rgba(110,126,210,.05) 45%, transparent 72%); }
 .hs-orbit { position: absolute; left: 50%; top: 56%; width: 560px; height: 360px; border-radius: 50%;
   border: 1px solid rgba(255,255,255,.07); transform: translate(-50%,-50%) rotateX(68deg) rotateZ(0deg); animation: orbit 60s linear infinite; }
 .hs-orbit-2 { width: 720px; height: 470px; border-color: rgba(255,255,255,.04); animation-duration: 90s; animation-direction: reverse; }
@@ -153,9 +153,17 @@ h1 .w > span {
     linear-gradient(160deg, #121216 0%, #0b0b0e 55%, #08080a 100%);
   box-shadow: inset 0 0 0 1px rgba(255,255,255,.08), inset 0 1px 0 rgba(255,255,255,.08), 0 -20px 60px -30px rgba(0,0,0,.9), 0 40px 80px -40px rgba(0,0,0,.9);
   transform: scale(var(--s)); transform-origin: 50% 0;
-  filter: brightness(var(--b));
   transition: box-shadow .4s var(--ease);
 }
+/* dim stacked cards with an overlay (opacity is compositor-only) instead of filter: brightness, which repainted the whole card every frame */
+.work-card-inner::after { content: ""; position: absolute; inset: 0; border-radius: inherit; background: #000; opacity: calc(1 - var(--b)); pointer-events: none; z-index: 2; will-change: opacity; }
+/* the scroll handler sets --s/--b every frame: keep them non-inherited so only the card restyles, not everything inside it,
+   and give the card its own layer so scale/dim are composited instead of repainted */
+@property --s { syntax: "<number>"; inherits: false; initial-value: 1; }
+@property --b { syntax: "<number>"; inherits: false; initial-value: 1; }
+@media (min-width: 861px) { .work-card-inner { will-change: transform; } }
+/* pause looping animations while a section is off screen */
+.offscreen, .offscreen * { animation-play-state: paused !important; }
 .work-card-inner:hover { box-shadow: inset 0 0 0 1px rgba(var(--acc), .35), inset 0 1px 0 rgba(255,255,255,.1), 0 40px 90px -40px rgba(var(--acc), .35); }
 .glow-track::before {
   content: ""; position: absolute; inset: 0; border-radius: inherit; pointer-events: none; opacity: 0; transition: opacity .4s;
@@ -183,7 +191,7 @@ h1 .w > span {
 .wc-tags { display: flex; flex-wrap: wrap; gap: 6px; margin-top: 20px; }
 
 .wc-visual { position: relative; display: grid; place-items: center; perspective: 1400px; }
-.wc-glow { position: absolute; width: 420px; height: 420px; border-radius: 50%; background: radial-gradient(circle, rgba(var(--acc), .32), transparent 65%); filter: blur(30px); }
+.wc-glow { position: absolute; width: 420px; height: 420px; border-radius: 50%; background: radial-gradient(circle, rgba(var(--acc), .3), rgba(var(--acc), .1) 40%, transparent 72%); }
 .wc-ring { position: absolute; width: 380px; height: 380px; border-radius: 50%; box-shadow: inset 0 0 0 1px rgba(var(--acc), .18); animation: ring 8s ease-in-out infinite; }
 @keyframes ring { 0%,100% { transform: scale(1); opacity: .7; } 50% { transform: scale(1.06); opacity: 1; } }
 .tilt { --tx: 0; --ty: 0; transform-style: preserve-3d; transform: rotateY(calc(var(--tx) * 10deg)) rotateX(calc(var(--ty) * -8deg)); transition: transform .5s var(--ease); }
@@ -271,9 +279,9 @@ h1 .w > span {
 .lg-fab { margin-top: auto; align-self: center; font-size: 11px; font-weight: 560; padding: 9px 16px; border-radius: 999px; background: #a48be6; color: #120d1e; }
 
 /* ---------- Reveal ---------- */
-.js [data-reveal] { opacity: 0; transform: translateY(28px); filter: blur(8px);
-  transition: opacity .9s var(--ease), transform .9s var(--ease), filter .9s var(--ease); transition-delay: var(--d, 0ms); }
-.js [data-reveal].in { opacity: 1; transform: none; filter: none; }
+.js [data-reveal] { opacity: 0; transform: translateY(28px);
+  transition: opacity .9s var(--ease), transform .9s var(--ease); transition-delay: var(--d, 0ms); }
+.js [data-reveal].in { opacity: 1; transform: none; }
 .js .work-card .wc-copy > *, .js .work-card .wc-visual { opacity: 0; transform: translateY(24px); transition: opacity .8s var(--ease), transform .8s var(--ease); }
 .js .work-card.in .wc-copy > *, .js .work-card.in .wc-visual { opacity: 1; transform: none; }
 .work-card.in .wc-copy > *:nth-child(2) { transition-delay: 80ms; }

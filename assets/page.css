@@ -7,17 +7,15 @@ body.v2 .nav { background: rgba(5,5,5,.55); }
 .spot-a {
   position: absolute; width: 900px; height: 900px; left: 52%; top: -18%;
   background: radial-gradient(circle, rgba(94,106,210,.22) 0%, rgba(94,106,210,.08) 32%, transparent 68%);
-  filter: blur(8px);
 }
 .spot-b {
   position: absolute; width: 680px; height: 680px; left: -12%; top: 42%;
   background: radial-gradient(circle, rgba(80,140,160,.1) 0%, transparent 66%);
-  filter: blur(10px);
 }
 .spotlight {
   position: absolute; width: 760px; height: 760px; left: 58%; top: 6%;
   background: radial-gradient(circle, rgba(255,255,255,.09) 0%, rgba(120,130,220,.08) 28%, transparent 64%);
-  pointer-events: none; filter: blur(2px);
+  pointer-events: none;
 }
 
 .hero-combo {
